@@ -11,10 +11,14 @@ let minutes = 0
 
 function getTimeString(){
       let secondsString = seconds;
+      let minutesString = minutes;
    if (seconds < 10){
     secondsString = '0'+seconds;
    }
-   const timeString = `${minutes}:${secondsString}:${hundreds}`
+   if(minutes<10){
+    minutesString = '0'+minutes;
+   }
+   const timeString = `${minutesString}:${secondsString}:${hundreds}`
 
    return timeString
 }
