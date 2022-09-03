@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timerV3</title>
+    <!-- BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- My style -->
+    <link rel="stylesheet" href="./Timer-Style.css">
+</head>
+
+<body>
+    <main class="container-fluid  ">
+        <div class='container-fluid w-50 mt-5 myDiv-Class border border-dark rounded d-flex align-center flex-column'>
+
+            <div class="d-flex flex-row w-100  justify-content-center m-2   ">
+                <label for="time-input-min" class="m-1"> Minutes:</label>
+                <input type="text" id="time-input-min" autofocus>
+
+                <label for="time-input-sec" class="m-1"> Seconds:</label>
+                <input type="text" id="time-input-sec">
+            </div>
+            <div class="p-1  w-100 text-center  ">
+                <label for="description" class=""> Description:</label>
+                <input type="text" id="description" class=" w-75">
+            </div>
+            <button id="create-timer" class="btn btn-outline-success">Create Timer</button>
+
+            <div id="timers-container" class="border border-dark rounded "></div>
+        </div>
+    </main>
+    <script type='module' src="./app.js"></script>
+    <script src="./appTest.js"></script>
+
+</body>
+
+</html>

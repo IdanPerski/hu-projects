@@ -1,6 +1,7 @@
+export default Timer; 
+
 const timersContainer = document.querySelector('#timers-container');
 function createElementInTimerContainer(variable,tag,text,elementClass,evntListenerFunction){
-    ('#timers-container');
     variable = document.createElement(tag);
     variable.innerText = text;
     timersContainer.appendChild(variable)
@@ -59,13 +60,6 @@ function Timer(initialTime){
     createElementInTimerContainer('stopButton','button','Stop','stopBtn',stopTimer);
     createElementInTimerContainer('clearButton','button','clear','clearBtn');
 
-    
-
-    
-
-    
-    
-  
     };
 
   
@@ -76,7 +70,7 @@ function Timer(initialTime){
 // console.log(startBtn )
 
 }
-export default Timer; 
+
  
    
 

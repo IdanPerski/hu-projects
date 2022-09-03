@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.myDiv-Class {
+    background-color: rgba(33, 22, 22, .2);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+span {
+    margin: auto;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    width: 80px;
+}
+
+button {
+    margin: 5px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: mediumseagreen;
+    transition: 0.5s;
+
+}
+
+.timer-and-buttons {
+    /* background-color: red !important; */
+
+}

@@ -1,6 +1,13 @@
-export default function Timer(initialTime,createTimerElements){
+export default function Timer(initialTime,createTimerElements , min,sec, descriptionElement){
+    
+    
     const timerContainer = document.createElement('div');
-    this.initialTime = initialTime;
+    
+   
+    this.initialTime =initialTime;
+    this.descriptionElement =descriptionElement.value
+  
+     
     let displayTime;
     let timerInterval;
     
@@ -27,9 +34,10 @@ export default function Timer(initialTime,createTimerElements){
 
     function runTimer(){
         
-        initialTime--
-        displayTime.innerText = initialTime;
-        if(initialTime<=0){
+        sec--
+        initialTime= min+':'+sec;
+        displayTime.innerText =initialTime;
+        if(sec<=0){
             stopTimer()
         
         }
@@ -42,7 +50,9 @@ export default function Timer(initialTime,createTimerElements){
     }
 
     function startTimer(){
+       
        timerInterval =  setInterval(runTimer,1000)
+       
    
     }
 
@@ -50,7 +60,8 @@ export default function Timer(initialTime,createTimerElements){
         showTime()
         createTimerElements.appendChild(timerContainer);
         timerContainer.style.height = '100px'
-        timerContainer.setAttribute('class','bg-info '+'p-3 '+'timer-and-buttons')
+        timerContainer.setAttribute('class','bg-dark '+'p-3 '+'timer-and-buttons')
+        createButton('div', descriptionElement.value,'text-center bg-danger' );
         createButton('button','Start','startBtn',startTimer)
         createButton('button','Stop','stopBtn',stopTimer)
         createButton('button','Delete','deleteBtn')
@@ -61,7 +72,7 @@ export default function Timer(initialTime,createTimerElements){
     
     this.createTimer = function(){
          createTimerContainer()
-
+        
        }
 
 }
